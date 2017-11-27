@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.css">
         <link rel="stylesheet" href="assets/css/bootstrap-theme.css">
@@ -41,7 +41,7 @@
         <section id="about" class="indent-middle">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-12">
                         <img class="center-block" src="assets/img/tel.png">
                         <div class="text-center">
                             <a href="https://itunes.apple.com/ru/app/prime/id910475830?ls=1&mt=8" target="_blank"><img src="assets/img/app-store.png"></a>
@@ -49,7 +49,7 @@
                         </div>
 
                     </div>
-                    <div class="col-md-8 text-justify">
+                    <div class="col-md-8 col-xs-12 text-justify">
                         <h1>PRIME</h1>
                         <h1>ВНИМАНИЕ К СЕБЕ</h1>
                         <div class="zigzag"></div>
@@ -86,17 +86,17 @@
             <div class="container text-center">
                 <h1>ГЛАВНОЕ ДЛЯ НАС</h1>
                 <div class="row secreted-col">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-12">
                         <i class="fa fa-coffee"></i>
                         <h3>КОМФОРТ</h3>
                         <p>При создании Prime sport&spa мы ориентировались на европейский исключительный сервис, который наполняет клуб атмосферой позитива и доброжелательности. Мы обратились к самым последним разработкам в мире фитнес и велнес, чтобы занятия спортом были приятными, эффективными, насыщенными.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-12">
                         <i class="fa fa-heart"></i>
                         <h3>ПОЗНАНИЕ СЕБЯ</h3>
                         <p>В Prime sport&spa вы сможете остановить суету жизни и насладиться каждым движением, почувствовать собственную силу и мощь, напряжением и приятным растяжением мышц, страстью танца и негой расслабления. Познать себя, ощутить саму суть жизни здесь и сейчас, в Prime sport&spa.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-12">
                         <i class="fa fa-lightbulb-o"></i>
                         <h3>ВДОХНОВЕНИЕ</h3>
                         <p>Мы много путешествовали, чтобы найти вдохновение для  создания идеального фитнес-клуба, и нашли ответ на свои вопросы в Италии. Эта страна – наполнена светом, солнцем, любовью к каждой минуте жизни, оптимизмом. Мы захотели поделиться с каждым нашим гостем этой неповторимой жизнерадостностью!</p>
@@ -113,17 +113,17 @@
             <div class="container text-center">
                 <h1>КЛУБНЫЕ КАРТЫ</h1>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
                         <h3>COMFORT</h3>
                         <p><img class="card" src="assets/img/cards/card1.png"></p>
                         <p>Для тех, кто любит тренироваться утром и днем и ценит выгодные предложения.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
                         <h3>PRIME VIP</h3>
                         <p><img class="card" src="assets/img/cards/card2.png"></p>
                         <p>Парковочное место на время пребывания в клубе, отдельная рецепция и раздевалка, ряд бонусов и привилегий.</p>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
                         <h3>INDIVIDUALE</h3>
                         <p><img class="card" src="assets/img/cards/card3.png"></p>
                         <p>Неограниченное посещение всех зон клуба: тренажерный зал, групповые программы, бассейн, хаммам, джакузи, 12 месяцев фитнеса, 60 дней заморозки, 3 гостевых визита, 1 консультация фитнес-врача.</p>
@@ -138,19 +138,19 @@
                 <h1>РАСПИСАНИЕ</h1>
                 <div class="row secreted-col ">
                     <a href="http://primesport.pro/assets/files/general.pdf" target="_blank">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <p><img src="assets/img/timetable/people.png"></p>
                             <h3>ВЗРОСЛЫЕ</h3>
                         </div>
                     </a>
                     <a href="http://primesport.pro/assets/files/teenagers.pdf" target="_blank" class="link">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <p><img src="assets/img/timetable/teen.png"></p>
                             <h3>ПОДРОСТКИ</h3>
                         </div>
                     </a>
                     <a href="http://primesport.pro/assets/files/kids.pdf" target="_blank" class="link">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <p><img src="assets/img/timetable/child.png"></p>
                             <h3>ДЕТИ</h3>
                         </div>
@@ -167,7 +167,7 @@
             <div class="container">
                 <div class="row text-center">
                     <h1>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h1>
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-8 col-lg-offset-2 col-xs-12">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
                             <div class="carousel-inner">
