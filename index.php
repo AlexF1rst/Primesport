@@ -113,17 +113,17 @@
             <div class="container text-center">
                 <h1>КЛУБНЫЕ КАРТЫ</h1>
                 <div class="row">
-                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
                         <h3>COMFORT</h3>
                         <p><img class="card" src="assets/img/cards/card1.png"></p>
                         <p>Для тех, кто любит тренироваться утром и днем и ценит выгодные предложения.</p>
                     </div>
-                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
                         <h3>PRIME VIP</h3>
                         <p><img class="card" src="assets/img/cards/card2.png"></p>
                         <p>Парковочное место на время пребывания в клубе, отдельная рецепция и раздевалка, ряд бонусов и привилегий.</p>
                     </div>
-                    <div class="col-md-4 col-xs-8 col-xs-offset-2">
+                    <div class="col-md-4 col-md-offset-0 col-xs-8 col-xs-offset-2">
                         <h3>INDIVIDUALE</h3>
                         <p><img class="card" src="assets/img/cards/card3.png"></p>
                         <p>Неограниченное посещение всех зон клуба: тренажерный зал, групповые программы, бассейн, хаммам, джакузи, 12 месяцев фитнеса, 60 дней заморозки, 3 гостевых визита, 1 консультация фитнес-врача.</p>
