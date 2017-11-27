@@ -1,7 +1,7 @@
 <?
 $database    = 'prime'; // название базы
-$mysql_user    = 'admin'; // пользователь
-$mysql_password    = '123'; //пароль
+$mysql_user    = 'root'; // пользователь
+$mysql_password    = ''; //пароль
 $mysql_host    = 'localhost'; //сервер
 
 $success = mysql_pconnect ($mysql_host, $mysql_user, $mysql_password);

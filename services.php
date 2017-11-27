@@ -1,7 +1,7 @@
 
 
 <?
-include "connect.php";
+include "db/connect.php";
 
 
 if(isset($_GET['category']))
@@ -25,7 +25,7 @@ if (!$result)
 	<meta charset="utf-8">
 	<title>Prime УСЛУГИ</title>	
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="jquery.immersive-slider.js"></script>
 	<link href='immersive-slider.css' rel='stylesheet' type='text/css'>
 	<link href='server.css' rel='stylesheet' type='text/css'>  
