@@ -1,3 +1,21 @@
+<?
+include "db/connect.php";
+
+$page = $_GET['page'];
+$result00 = mysql_query("SELECT COUNT(*) FROM news ");
+$temp = mysql_fetch_array($result00);
+$posts = $temp[0];
+
+//$ran = rand(0, $posts-3);
+$from = $posts-3;
+$result = mysql_query("SELECT * FROM news  ORDER BY id DESC LIMIT $from, $posts");
+
+if (!$result)
+{
+    echo "<p>Запрос на выборку данных из базы не прошел. Напишите об этом администратору. <br> <strong>Код ошибки:</strong></p>";
+    exit(mysql_error());
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -30,21 +48,22 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-offset-1-5 col-md-3">
-                    <h3>Каникулярный клуб дневного пребывания!</h3>
-                    <div><img src="assets/img/news/1.jpg" class="img-popular-news"></div>
-                    <p class="text-justify">На время летних каникул с 29 мая по 31 августа (кроме выходных) приглашаем детей 6-11 лет в Каникулярный клуб дневного пребывания! Время работы с 9:00 до 17:30!</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>Первая вечеринка PRIME Party!</h3>
-                    <div><img src="assets/img/news/2.jpg" class="img-popular-news"></div>
-                    <p class="text-justify">8 июня состоялась первая летняя вечеринка PRIME. Изысканные закуски от ресторана @st_tropez_poolcafe и самая уютная компания. Фооточет уже на нашей странице Facebook.</p>
-                </div>
-                <div class="col-md-3">
-                    <h3>9 апреля детские соревнования по плаванию</h3>
-                    <div><img src="assets/img/news/3.jpg" class="img-popular-news"></div>
-                    <p class="text-justify">Дорогие гости! 9 апреля состоятся детские соревнования по плаванию. Приглашаем к участию детей от 4 до 15 лет.</p>
-                </div>
+                <?
+                if (mysql_num_rows($result) > 0)
+
+                {
+                $myrow = mysql_fetch_array($result);
+                $first = true;
+                do
+                {?>
+                    <div class="<?if($first) echo "col-md-offset-1-5"?> col-md-3">
+                        <h3><?=$myrow["title"]?></h3>
+                        <div><img src="assets/img/news/<?=$myrow["image"]?>" class="img-popular-news"></div>
+                        <p class="text-justify"><?=$myrow["text"]?></p>
+                    </div>
+                <?
+                $first=false;
+                } while ($myrow = mysql_fetch_array($result));} mysql_close();?>
             </div>
         </div>
     </section>
@@ -58,44 +77,64 @@
             </div>
             <div class="row">
                 <div class="col-md-offset-1-5 col-md-6">
-                    <!-- Отдельная новость-->
-                    <div class="row news">
-                        <div class="col-md-4">
-                            <div><img src="assets/img/news/4.jpg" class="img-news"></div>
+                    <?
+                    include "db/connect.php";
+
+                    $page = $_GET['page'];
+                    $result00 = mysql_query("SELECT COUNT(*) FROM news ");
+                    $temp = mysql_fetch_array($result00);
+                    $posts = $temp[0];
+
+
+                    $num = 3;
+
+                    $total = (($posts - 1) / $num) + 1;
+                    $total =  intval($total);
+                    $page = intval($page);
+                    if(empty($page) or $page < 0) $page = 1;
+                    if($page > $total) $page = $total;
+                    // Вычисляем начиная с какого номера
+                    // следует выводить сообщения
+
+                    $start = $page * $num - $num;
+
+                    // Выбираем $num сообщений начиная с номера $start
+
+
+                    $result = mysql_query("SELECT * FROM news  ORDER BY id DESC LIMIT $start, $num");
+
+                    if (!$result)
+                    {
+                        echo "<p>Запрос на выборку данных из базы не прошел. Напишите об этом администратору. <br> <strong>Код ошибки:</strong></p>";
+                        exit(mysql_error());
+                    }
+
+
+                    if (mysql_num_rows($result) > 0)
+
+                    {
+                    $myrow = mysql_fetch_array($result);
+
+                    do
+                    {?>
+                        <!-- Отдельная новость-->
+                        <div class="row news">
+                            <div class="col-md-4">
+                                <div><img src="assets/img/news/<?=$myrow["image"]?>" class="img-news"></div>
+                            </div>
+                            <div class="col-md-8 text-justify">
+                                <h3><?=$myrow["title"]?></h3>
+                                <p><?=$myrow["text"]?></p>
+                            </div>
                         </div>
-                        <div class="col-md-8 text-justify">
-                            <h3>SKILL MILL с Ариной Бессаловой!</h3>
-                            <p>Каждый понедельник в 18:00 и среду в 20:00. Вас ждет невероятно азартная тренировка, направленная на развитие ловкости, координации, развития кардиореспираторной системы.</p>
-                        </div>
-                    </div>
-                    <!-- Отдельная новость-->
-                    <div class="row news">
-                        <div class="col-md-4">
-                            <div><img src="assets/img/news/5.jpg" class="img-news"></div>
-                        </div>
-                        <div class="col-md-8 text-justify">
-                            <h3>Гости PRIME Running</h3>
-                            <p>Команда PRIME Running знает, как правильно провести утро субботы! В субботу в гостях был Александр Степанов, который поделился историей своих достижений в спорте.</p>
-                        </div>
-                    </div>
-                    <!-- Отдельная новость-->
-                    <div class="row news">
-                        <div class="col-md-4">
-                            <div><img src="assets/img/news/6.jpg" class="img-news"></div>
-                        </div>
-                        <div class="col-md-8 text-justify">
-                            <h3>Бал PRIME</h3>
-                            <p>22 декабря состоялось грандиозное событие императорский Бал PRIME. Гости вечера окунулись в атмосферу русского бала XIX века, кружили в вальсе, танцевали кадриль и полонез.</p>
-                        </div>
-                    </div>
+                    <?} while ($myrow = mysql_fetch_array($result));}?>
 
                     <div class="row text-center">
                         <ul class="pagination">
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
+                            <?for ($i=1; $i<=$total; $i++){
+                                if($i==$page) echo "<li class='active'><a href='?page=$i'>$i</a></li>";
+                                else echo "<li><a href='?page=$i'>$i</a></li>";
+                            } ?>
                         </ul>
                     </div>
                 </div>

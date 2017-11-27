@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+
 <!-- Навигация -->
 <section id="navigation">
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -17,6 +19,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">ГЛАВНАЯ</a></li>
                     <li><a href="/news.php">НОВОСТИ</a></li>
                     <li><a href="/services.php">УСЛУГИ</a></li>
                     <li><a href="/personal.php">СОТРУДНИКИ</a></li>

@@ -1,10 +1,13 @@
  .wrapper {
-    	height: auto !important;
-    	height: 100%;
-    	margin: 0 auto; 
+    	/*height: auto !important;*/
+    	height: 100vh;
+    	margin: 0 auto;
     	overflow: hidden;
     }
-    
+ .wrapper .main{
+     height: 100%;
+ }
+
     a {
       text-decoration: none;
     }
